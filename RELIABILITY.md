@@ -1,5 +1,7 @@
 # Reliability and enforcement boundaries
 
+> This document describes the local revised workflows before the public export was sanitized. The JSON in `workflows/` has credential references, workflow IDs, pinned data and instance metadata removed. The 37 mocked checks below were run on the pre-sanitization files; a fresh import and live test are required for the published copies.
+
 The architecture is Chat → Orchestrator → Research Agent → Analyst → Report writer → Markdown/HTML → Gotenberg PDF. The writer can additionally call Research Agent. Research Agent has no path back to writer, Analyst or Orchestrator, so there is no recursive workflow cycle. Agents can still repeat their available tools within an invocation.
 
 ## What code/connections enforce

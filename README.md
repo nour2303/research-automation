@@ -19,7 +19,7 @@ flowchart LR
 
 - [Sanitized workflow exports](workflows/) contain the orchestrator, research, analyst, and writer workflows. Credential references, original workflow IDs, pinned data, instance metadata, and webhook IDs were removed before publication. These exports have not been imported or run after sanitization.
 - The [architecture and limits](RELIABILITY.md) note explains quote verification, numeric checks, chart rules, and the checks that still require human judgment.
-- [Validation results](Validation-results.json) record **37 local mocked checks passed, 0 failed** for the revised exports. They did not execute n8n, live research APIs, or PDF conversion.
+- [Validation results](Validation-results.json) record **37 local mocked checks passed, 0 failed** for the revised exports **before public sanitization**. They did not execute n8n, live research APIs, or PDF conversion, and they do not validate the sanitized copies.
 - The original project summary recorded a case where two proposed quotations were rejected in a mountain-height test. That issue and the later revision should not be conflated with a full end-to-end production test.
 
 ## Reproduction and limits
